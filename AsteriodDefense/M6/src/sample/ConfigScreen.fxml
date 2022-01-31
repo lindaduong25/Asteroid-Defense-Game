@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ConfigController">
+   <children>
+      <ImageView fitHeight="481.0" fitWidth="678.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@items/spacebg.jpeg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="username" layoutX="93.0" layoutY="146.0" prefHeight="26.0" prefWidth="416.0" style="-fx-font-family: impact;" text="Enter Name">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Button fx:id="easy" layoutX="95.0" layoutY="227.0" mnemonicParsing="false" onAction="#gameScreenEasy" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: green; -fx-font-family: impact; -fx-text-fill: white;" text="Easy" textAlignment="CENTER" />
+      <Button fx:id="medium" layoutX="245.0" layoutY="228.0" mnemonicParsing="false" onAction="#gameScreenMedium" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: purple; -fx-text-fill: white; -fx-font-family: impact;" text="Medium" textAlignment="CENTER" />
+      <Button fx:id="hard" layoutX="396.0" layoutY="228.0" mnemonicParsing="false" onAction="#gameScreenHard" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: orange; -fx-text-fill: white; -fx-font-family: impact;" text="Hard" textAlignment="CENTER" />
+      <ImageView fx:id="towerView" fitHeight="150.0" fitWidth="200.0" layoutX="346.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</Pane>

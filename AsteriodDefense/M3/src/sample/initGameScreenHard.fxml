@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseReleased="#placeTower" prefHeight="586.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0" />
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="594.0" fitWidth="845.0" layoutX="-6.0" layoutY="-8.0">
+               <image>
+                  <Image url="@items/path.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcWidth="5.0" fill="#0062ff" height="34.0" layoutX="129.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" width="89.0" />
+            <Rectangle arcWidth="5.0" fill="RED" height="34.0" layoutX="210.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="89.0" />
+            <MenuButton fx:id="towerMenuHard" contentDisplay="CENTER" layoutX="15.0" layoutY="6.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="110.0" style="-fx-background-color: pink; -fx-font-family: impact;" text="Tower Menu" textFill="WHITE">
+              <items>
+                <MenuItem fx:id="menuItemHard1" mnemonicParsing="false" onAction="#selectTower1" text="Gravity Accelerator: Speeds up Asteroids and knocks them into eachother $500" />
+                <MenuItem fx:id="menuItemEasy2" mnemonicParsing="false" onAction="#selectTower2" text="Crusher: Emits a wave of crushing gravitational force in a circular area $500" />
+                  <MenuItem fx:id="menuItemEasy3" mnemonicParsing="false" onAction="#selectTower3" text="Infector: Infects Asteroids with rock eating worms. Infected Asteroids deal more damage to monument. $500" />
+              </items>
+            </MenuButton>
+            <Label fx:id="hardDiff" layoutX="16.0" layoutY="42.0" prefHeight="117.0" prefWidth="186.0" style="-fx-text-fill: white; -fx-font-family: verdana;" text="Difficulty : Hard             Starting Money: $1000 Monument Type: Deteriorating       Monument Health: 4000HP" textFill="WHITE" wrapText="true" />
+             <ImageView fx:id="towerView1" fitHeight="150.0" fitWidth="200.0" layoutX="440.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" />
+             <ImageView fx:id="towerView2" fitHeight="150.0" fitWidth="200.0" layoutX="483.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true" />
+             <ImageView fx:id="path1" fitHeight="179.0" fitWidth="52.0" layoutX="699.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" />
+             <ImageView fx:id="path2" fitHeight="50.0" fitWidth="177.0" layoutX="525.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" />
+             <ImageView fx:id="path3" fitHeight="197.0" fitWidth="58.0" layoutX="525.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" />
+             <ImageView fx:id="path4" fitHeight="56.0" fitWidth="200.0" layoutX="551.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" />
+             <ImageView fx:id="path5" fitHeight="235.0" fitWidth="58.0" layoutX="692.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true" />
+             <ImageView fx:id="path6" fitHeight="56.0" fitWidth="499.0" layoutX="203.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true" />
+             <ImageView fx:id="path7" fitHeight="167.0" fitWidth="58.0" layoutX="199.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true" />
+             <ImageView fx:id="path8" fitHeight="64.0" fitWidth="230.0" layoutX="240.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true" />
+             <ImageView fx:id="path9" fitHeight="298.0" fitWidth="58.0" layoutX="414.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" />
+             <ImageView fx:id="path10" fitHeight="64.0" fitWidth="271.0" layoutX="199.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" />
+             <ImageView fx:id="path11" fitHeight="157.0" fitWidth="58.0" layoutX="203.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
+             <ImageView fx:id="path12" fitHeight="50.0" fitWidth="218.0" layoutX="-6.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true" />
+             <TextArea fx:id="moneyDisplay" editable="false" layoutX="508.0" layoutY="13.0" prefHeight="6.0" prefWidth="121.0" text="Money: 1000">
+                 <font>
+                     <Font size="17.0" />
+                 </font>
+             </TextArea>
+         </children>
+      </Pane>
+   </children>
+</StackPane>

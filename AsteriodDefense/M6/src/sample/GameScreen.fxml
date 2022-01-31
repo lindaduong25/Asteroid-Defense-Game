@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane fx:id="rootPane" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GameController">
+   <children>
+      <Pane fx:id="pathPane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="path1" fitHeight="151.0" fitWidth="48.0" layoutX="714.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="path2" fitHeight="50.0" fitWidth="177.0" layoutX="574.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="path3" fitHeight="197.0" fitWidth="58.0" layoutX="574.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="path4" fitHeight="56.0" fitWidth="177.0" layoutX="574.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="path5" fitHeight="228.0" fitWidth="58.0" layoutX="693.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="path6" fitHeight="56.0" fitWidth="499.0" layoutX="203.0" layoutY="516.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="path7" fitHeight="180.0" fitWidth="58.0" layoutX="203.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="path8" fitHeight="56.0" fitWidth="230.0" layoutX="240.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="path9" fitHeight="255.0" fitWidth="58.0" layoutX="414.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="path10" fitHeight="52.0" fitWidth="265.0" layoutX="202.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="path11" fitHeight="157.0" fitWidth="58.0" layoutX="203.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="path12" fitHeight="56.0" fitWidth="218.0" layoutX="-6.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Pane fx:id="generalPane" prefHeight="346.0" prefWidth="839.0">
+         <children>
+            <ImageView fitHeight="594.0" fitWidth="845.0" layoutX="-6.0" layoutY="-8.0">
+               <image>
+                  <Image url="@items/background.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="monument" fitHeight="228.0" fitWidth="241.0" layoutX="619.0" layoutY="-68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@items/monument.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a4b9cd" height="83.0" layoutX="1.0" stroke="BLACK" strokeType="INSIDE" width="839.0" />
+            <fx:include fx:id="enemies" source="Enemies.fxml" />
+            <fx:include fx:id="towers" source="Towers.fxml" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a4b9cd" height="83.0" stroke="BLACK" strokeType="INSIDE" width="839.0" />
+            <MenuButton fx:id="towerMenu" contentDisplay="CENTER" layoutX="27.0" layoutY="16.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="138.0" style="-fx-background-color: pink; -fx-font-family: impact; -fx-background-size: 14;" text="Tower Menu" textFill="WHITE" wrapText="true">
+              <items>
+                <MenuItem fx:id="menuItem1" mnemonicParsing="false" onAction="#selectTower1" text="Gravity Accelerator: Speeds up Asteroids and knocks them into eachother $" />
+                <MenuItem fx:id="menuItem2" mnemonicParsing="false" onAction="#selectTower2" text="Crusher: Emits a wave of crushing gravitational force in a circular area $" />
+                  <MenuItem fx:id="menuItem3" mnemonicParsing="false" onAction="#selectTower3" text="Infector: Infects Asteroids with rock eating worms. Infected Asteroids deal more damage to monument. $" />
+              </items>
+            </MenuButton>
+            <TextArea fx:id="moneyDisplay" editable="false" layoutX="176.0" layoutY="14.0" prefHeight="48.0" prefWidth="144.0" text="Money: $">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextArea>
+            <TextArea fx:id="healthDisplay" editable="false" layoutX="330.0" layoutY="12.0" prefHeight="34.0" prefWidth="144.0" text="Health: ">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="playButton" layoutX="684.0" layoutY="17.0" mnemonicParsing="false" onAction="#startRound" prefHeight="48.0" prefWidth="124.0" style="-fx-background-color: blue; -fx-font-family: impact; -fx-background-size: 15;" text="Start Combat" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <MenuButton fx:id="UpgradeTowers" contentDisplay="CENTER" layoutX="508.0" layoutY="15.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="138.0" style="-fx-background-color: purple; -fx-font-family: impact; -fx-background-size: 14;" text="Tower Upgrade" textFill="WHITE" wrapText="true">
+               <items>
+                  <MenuItem fx:id="menuItem11" mnemonicParsing="false" onAction="#upgradeTower1" text="Upgrade Range" />
+                  <MenuItem fx:id="menuItem21" mnemonicParsing="false" onAction="#upgradeTower2" text="Upgrade Damage" />
+               </items>
+            </MenuButton>
+         </children>
+      </Pane>
+      <fx:include fx:id="gameOver" source="GameOverScreen.fxml" />
+   </children>
+</StackPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.WelcomeController">
+   <children>
+      <ImageView fx:id="background" fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@items/spacebg.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="69.0" layoutY="27.0" style="-fx-font-family: Impact;" text="Asteroid Defense" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Label>
+      <Pane layoutX="191.0" layoutY="124.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="199.0" fitWidth="200.0">
+               <image>
+                  <Image url="@items/asteroid.jpeg" />
+               </image>
+            </ImageView>
+            <Button fx:id="startGame" layoutX="47.0" layoutY="83.0" mnemonicParsing="false" onAction="#goToConfig" style="-fx-font-family: Impact; -fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 18;" text="Start Game" />
+         </children>
+      </Pane>
+      <ImageView fx:id="towerView" fitHeight="150.0" fitWidth="200.0" layoutX="353.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</Pane>
